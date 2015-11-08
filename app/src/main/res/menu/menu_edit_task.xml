@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_twitter"
+        android:orderInCategory="100"
+        android:title="@string/action_twitter"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sms"
+        app:showAsAction="never"
+        android:title="@string/action_sms" />
+</menu>

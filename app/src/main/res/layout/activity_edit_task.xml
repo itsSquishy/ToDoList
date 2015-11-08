@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/taskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/task_title_hint" />
+
+    <EditText
+        android:id="@+id/taskContent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignStart="@+id/taskTitle"
+        android:layout_below="@+id/taskTitle"
+        android:gravity="top"
+        android:hint="@string/task_content_hint" />
+    <Button
+        android:id="@+id/saveTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button"
+        android:layout_below="@+id/taskContent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/toggleButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteTask"
+        android:layout_below="@+id/taskContent"
+        android:layout_toStartOf="@+id/saveTask"
+        android:layout_alignBottom="@+id/toggleButton"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskContent"
+        android:layout_toStartOf="@+id/deleteTask"
+        android:textOn="Persistent Notification"
+        android:textOff="Persistent Notification"
+        android:onClick="onToggleClicked"/>
+</RelativeLayout>
